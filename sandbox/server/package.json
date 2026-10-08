@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,9 +18,16 @@
     "express": "^5.2.1",
     "mongoose": "^9.10.1",
     "morgan": "^1.12.1",
+    "undici": "6.28.1",
     "uuid": "^14.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "overrides": {
+    "undici": "6.28.1",
+    "@kubernetes/client-node": {
+      "undici": "6.28.1"
+    }
   }
 }
